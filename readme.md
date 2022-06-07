@@ -32,16 +32,26 @@ python-ta/
 ``` py
 # src/app.py
 
-def solution(n):
-    # your code goes here
+def solution(num):
+    result = False
+    if num >1:
+        for i in range( 2, num):
+            if (num % i) ==0:
+                return result
+        else:
+            result= True
+    return result
+    
+
+  
 
 
 if __name__ == "__main__":
     if len(sys.argv) <= 1:
         sys.exit(os.error("Argument required"))
 
-    n = int(sys.argv[1])
-    print(solution(n))
+    num = int(sys.argv[1])
+print(solution(3))
 
 ```
 
